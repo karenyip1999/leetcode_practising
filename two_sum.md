@@ -24,3 +24,11 @@ My first thoughts were to do a for loop to iterate through the array adding i an
 
 I started thinking about adding if statements to target numbers not next to each other but this became tedious and was clear I was overcomplicating a problem classified as Easy. 
 
+## Approach
+<!-- Describe your approach to solving the problem. -->
+1. I initialised a new array called sumArray with the size of 2 as it will only hold 2 numbers, which will be the 2 indexes of the elements that add up to the target 
+2. I took the approach of using a nested for loop to iterate through the nums array starting the outer for loop at index 0
+3. I set the inner for loop to start at i + 1 which would be the number at index 1
+4. Inside of the inner for loop, the conditional if statement checked to see if the number at i and j added to equal the target. If it did add to the target then index 0 of sumArray will be i and index 1 will be j and this is returned
+5. In the case of nothing adding up to the target, sumArray is returned regardless 
+
