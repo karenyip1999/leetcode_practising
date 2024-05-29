@@ -38,3 +38,20 @@ My first thoughts on solving this problem was to do a merge sort but as this pro
 3. I set the inner for loop to loop through the nums2 array and then replace each element at that index in the nums1 array to the element at the index of the nums2 array
 4. After looping through both nums1 and nums2, I sorted the nums1 array
 5. Finally, I printed out the nums1 array
+
+## Code
+```
+class Solution {
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int startIndex = nums1.length - n;
+        for (int i = startIndex; i < nums1.length; i++) {
+            for (int j = 0; j < nums2.length; j++) {
+                nums1[i] = nums2[j];
+                i++;
+            }
+        }
+        Arrays.sort(nums1);
+        System.out.println(nums1);
+    }
+}
+```
