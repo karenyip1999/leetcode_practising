@@ -29,7 +29,9 @@ Note that because m = 0, there are no elements in nums1. The 0 is only there to 
 
 ## Intuition
 <!-- Describe your first thoughts on how to solve this problem. -->
-My first thoughts on solving this problem was to do a merge sort but as this problem was classified as Easy, I didn't want to overcomplicate it. I was thinking about potentially converting the array to an arraylist to make it easier to replace elements inside the arraylist and then converting it back to an array but that also complicated it.
+My first thoughts on solving this problem was to do a merge sort but as this problem was classified as Easy, I didn't want to overcomplicate it. 
+
+I was thinking about potentially converting the array to an arraylist to make it easier to replace elements inside the arraylist and then converting it back to an array but that also complicated it.
 
 ## Approach
 <!-- Describe your approach to solving the problem. -->
