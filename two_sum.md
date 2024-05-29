@@ -32,3 +32,21 @@ I started thinking about adding if statements to target numbers not next to each
 4. Inside of the inner for loop, the conditional if statement checked to see if the number at i and j added to equal the target. If it did add to the target then index 0 of sumArray will be i and index 1 will be j and this is returned
 5. In the case of nothing adding up to the target, sumArray is returned regardless 
 
+## Code
+```
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int [] sumArray = new int[2];
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j ++) {
+                    if (nums[i] + nums[j] == target){
+                        sumArray[0] = i;
+                        sumArray[1] = j;
+                        return sumArray;
+                    }
+            }
+        }
+        return sumArray;
+    }
+}
+```
