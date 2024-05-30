@@ -59,7 +59,13 @@ I was also thinking of focusing on the elements in the array which did equal the
 
 I really struggled with this task and placed my focus on elements inside of the array which did equal the val and tried to place these at the end of the array using a nested for loop with a decrementing counter to handle instances where the final element is already equal to the val.
 
-
-
+## Approach
+<!-- Describe your approach to solving the problem. -->
+After struggling with placing elements at the end of the array that equaled val, I flipped my approach and looked at elements in the array which did not equal the val and placing them at the beginning of the array
+1. I create the variable k and set it to 0
+2. I use a for loop to iterate through the nums array
+3. Inside of the for loop is an if statement that checks if the element is not equal to val
+4. If the element is not equal to val, I set the element to the position inside of the nums array based on the k count and then increment the k count by 1
+5. The k counter is then returned 
 
 
