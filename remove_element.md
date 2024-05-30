@@ -49,5 +49,17 @@ Note that the five elements can be returned in any order.
 
 It does not matter what you leave beyond the returned k (hence they are underscores).
 
+## Intuition
+<!-- Describe your first thoughts on how to solve this problem. -->
+My initial thoughts were that this was going to be an easy problem to solve. 
+
+I started thinking about making another array that would store all elements from the nums array which did not equal val, and then increase the counter called k. I would then copy this new array and name it as nums, and then return.
+
+I was also thinking of focusing on the elements in the array which did equal the val and using a sorting algorithm to place those elements at the end of the array.
+
+I really struggled with this task and placed my focus on elements inside of the array which did equal the val and tried to place these at the end of the array using a nested for loop with a decrementing counter to handle instances where the final element is already equal to the val.
+
+
+
 
 
