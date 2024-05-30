@@ -68,4 +68,20 @@ After struggling with placing elements at the end of the array that equaled val,
 4. If the element is not equal to val, I set the element to the position inside of the nums array based on the k count and then increment the k count by 1
 5. The k counter is then returned 
 
-
+## Code
+```
+class Solution {
+    public int removeElement(int[] nums, int val) {
+        int k = 0;
+        for (int i = 0; i < nums.length; i++){
+            if (nums[i] != val){
+                int tempValue = nums[k];
+                nums[k] = nums[i];
+                nums[i] = tempValue;
+                k++;
+            }
+        }
+        return k;
+    }
+}
+```
