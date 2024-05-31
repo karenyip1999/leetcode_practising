@@ -64,3 +64,19 @@ I changed my focus to compare the current i element with the previous element us
 5. The counter for k is then incremented.
 6. Finally, k is returned.
 
+## Code
+```java
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        int k = 1;
+        for(int i = 1; i < nums.length; i ++){
+            if(nums[i - 1] != nums[i]){
+                nums[k] = nums[i];
+                k++;
+            }
+
+        }
+        return k;
+    }
+}
+```
