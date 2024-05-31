@@ -1,4 +1,4 @@
-## Task
+## Task ✍
 Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. 
 
 The order of the elements may be changed. 
@@ -13,7 +13,7 @@ Consider the number of elements in nums which are not equal to val be k, to get 
 
 #### Custom Judge:
 The judge will test your solution with the following code:
-```
+```java
 int[] nums = [...]; // Input array
 int val = ...; // Value to remove
 int[] expectedNums = [...]; // The expected answer with correct length.
@@ -49,7 +49,7 @@ Note that the five elements can be returned in any order.
 
 It does not matter what you leave beyond the returned k (hence they are underscores).
 
-## Intuition
+## Intuition 💬
 <!-- Describe your first thoughts on how to solve this problem. -->
 My initial thoughts were that this was going to be an easy problem to solve. 
 
@@ -59,7 +59,7 @@ I was also thinking of focusing on the elements in the array which did equal the
 
 I really struggled with this task and placed my focus on elements inside of the array which did equal the val and tried to place these at the end of the array using a nested for loop with a decrementing counter to handle instances where the final element is already equal to the val.
 
-## Approach
+## Approach 💡
 <!-- Describe your approach to solving the problem. -->
 After struggling with placing elements at the end of the array that equaled val, I flipped my approach and looked at elements in the array which did not equal the val and placing them at the beginning of the array
 1. I create the variable k and set it to 0
@@ -68,8 +68,9 @@ After struggling with placing elements at the end of the array that equaled val,
 4. If the element is not equal to val, I set the element to the position inside of the nums array based on the k count and then increment the k count by 1
 5. The k counter is then returned 
 
-## Code
-```
+## Code 📝
+My solution to the task.
+```java
 class Solution {
     public int removeElement(int[] nums, int val) {
         int k = 0;
