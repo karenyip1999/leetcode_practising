@@ -1,4 +1,4 @@
-## Task
+## Task ✍
 You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
 
 Merge nums1 and nums2 into a single array sorted in non-decreasing order.
@@ -37,13 +37,13 @@ The result of the merge is [1].
 
 Note that because m = 0, there are no elements in nums1. The 0 is only there to ensure the merge result can fit in nums1.
 
-## Intuition
+## Intuition 💬
 <!-- Describe your first thoughts on how to solve this problem. -->
 My first thoughts on solving this problem was to do a merge sort but as this problem was classified as Easy, I didn't want to overcomplicate it. 
 
 I was thinking about potentially converting the array to an arraylist to make it easier to replace elements inside the arraylist and then converting it back to an array but that also complicated it.
 
-## Approach
+## Approach 💡
 <!-- Describe your approach to solving the problem. -->
 1. I took the approach of defining the start index of the nums1 array which for me was where 0s began.
 2. I set the outer for loop to begin at the index that held the first 0 in the nums1 array
@@ -51,8 +51,9 @@ I was thinking about potentially converting the array to an arraylist to make it
 4. After looping through both nums1 and nums2, I sorted the nums1 array
 5. Finally, I printed out the nums1 array
 
-## Code
-```
+## Code 📝
+My solution to the task.
+```java
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int startIndex = nums1.length - n;
