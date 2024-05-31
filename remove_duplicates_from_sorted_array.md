@@ -1,4 +1,4 @@
-## Task
+## Task ✍
 Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. 
 
 The relative order of the elements should be kept the same. 
@@ -45,7 +45,7 @@ Explanation: Your function should return k = 5, with the first five elements of 
 
 It does not matter what you leave beyond the returned k (hence they are underscores).
 
-## Intuition
+## Intuition 💬
 <!-- Describe your first thoughts on how to solve this problem. -->
 My first thoughts about this task was that I could use a for loop to iterate through the nums array and compare the current i element with the next element using i + 1.
 
@@ -55,7 +55,7 @@ In fixing this issue, I changed the for loop condition to end when it reached th
 
 I changed my focus to compare the current i element with the previous element using i - 1 instead.
 
-## Approach
+## Approach 💡
 <!-- Describe your approach to solving the problem. -->
 1. I created a variable k that counted the unique elements and by assuming the 0th element in the array would be unique, it is set to 1.
 2. I created a for loop that started at the 1st element with the understanding that the 0th element was unique.
@@ -64,7 +64,8 @@ I changed my focus to compare the current i element with the previous element us
 5. The counter for k is then incremented.
 6. Finally, k is returned.
 
-## Code
+## Code 📝
+My solution to the task.
 ```java
 class Solution {
     public int removeDuplicates(int[] nums) {
