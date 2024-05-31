@@ -14,7 +14,7 @@ Consider the number of unique elements of nums to be k, to get accepted, you nee
 #### Custom Judge:
 
 The judge will test your solution with the following code:
-```
+```java
 int[] nums = [...]; // Input array
 int[] expectedNums = [...]; // The expected answer with correct length
 
@@ -44,3 +44,15 @@ Output: ```5, nums = [0,1,2,3,4,_,_,_,_,_]```
 Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
 
 It does not matter what you leave beyond the returned k (hence they are underscores).
+
+## Intuition
+<!-- Describe your first thoughts on how to solve this problem. -->
+My first thoughts about this task was that I could use a for loop to iterate through the nums array and compare the current i element with the next element using i + 1.
+
+I quickly found the issue of falling out of bounds of the array.
+
+In fixing this issue, I changed the for loop condition to end when it reached the second to last element in the array but that produced an incorrect array with an incorrect k result.
+
+I changed my focus to compare the current i element with the previous element using i - 1 instead.
+
+
