@@ -55,4 +55,12 @@ In fixing this issue, I changed the for loop condition to end when it reached th
 
 I changed my focus to compare the current i element with the previous element using i - 1 instead.
 
+## Approach
+<!-- Describe your approach to solving the problem. -->
+1. I created a variable k that counted the unique elements and by assuming the 0th element in the array would be unique, it is set to 1.
+2. I created a for loop that started at the 1st element with the understanding that the 0th element was unique.
+3. Inside of the for loop, an if statement checks if the previous element is not the same as the current element, meaning the element at i is a unique element.
+4. The element at i replaces the element in the array at the count of k to keep the array sorted in ascending order.
+5. The counter for k is then incremented.
+6. Finally, k is returned.
 
