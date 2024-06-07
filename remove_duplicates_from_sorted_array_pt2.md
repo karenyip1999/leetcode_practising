@@ -63,3 +63,20 @@ I realised that instead of just comparing i against an element before it or 2 el
 4. If the condition is met, then the current element will replace the element in the nums array at the position of the number of k
 5. k count is then increased
 6. Finally, k is returned
+
+## Code 📝
+My solution to the task.
+```java
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        int k = 2;
+        for(int i = 2; i < nums.length; i++){
+            if(nums[i] != nums[k - 2]){
+                nums[k] = nums[i];
+                k++;
+            }
+        }
+        return k;
+    }
+}
+```
