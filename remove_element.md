@@ -62,11 +62,11 @@ I really struggled with this task and placed my focus on elements inside of the 
 ## Approach 💡
 <!-- Describe your approach to solving the problem. -->
 After struggling with placing elements at the end of the array that equaled val, I flipped my approach and looked at elements in the array which did not equal the val and placing them at the beginning of the array
-1. I create the variable k and set it to 0
-2. I use a for loop to iterate through the nums array
-3. Inside of the for loop is an if statement that checks if the element is not equal to val
-4. If the element is not equal to val, I set the element to the position inside of the nums array based on the k count and then increment the k count by 1
-5. The k counter is then returned 
+1. I created the variable k and set it to 0
+2. I used a for loop to iterate through the nums array
+3. Inside of the for loop is an if statement that checked if the element is not equal to val
+4. If the element is not equal to val, I set the element to the position inside of the nums array based on the k count and then incremented the k count by 1
+5. Finally, the k counter is returned 
 
 ## Code 📝
 My solution to the task.
