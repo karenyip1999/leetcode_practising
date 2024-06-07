@@ -50,6 +50,16 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 ## Intuition 💬
 <!-- Describe your first thoughts on how to solve this problem. -->
-I began thinking about comparing i against i - 1 and i + 1 (The previous and next elements in the array) but this obviously causes some array out of bounds issues. 
+I began thinking about comparing ```i``` against ```i - 1``` and ```i + 1``` (The previous and next elements in the array) but this obviously causes some array out of bounds issues. 
 
 I thought about having a counter that kept track of elements that had been encountered previously, making it easier to remove elements duplicated more than twice.
+
+## Approach 💡
+<!-- Describe your approach to solving the problem. -->
+I realised that instead of just comparing i against an element before it or 2 elements before it, I could go further and keep track of the specific index to place non duplicated elements through k.
+1. I created the variable k and set it to 2 as it is accepted that the same element can be duplicated twice
+2. I used a for loop to iterate through the nums array, starting from the 2nd index as this is the first element we want to  check for uniqueness
+3. I used an if statement to check if the current element at i is not equal to the element at the position of ```k - 2```. ```k - 2``` keeps track of the unique elements in nums
+4. If the condition is met, then the current element will replace the element in the nums array at the position of the number of k
+5. k count is then increased
+6. Finally, k is returned
