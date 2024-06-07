@@ -48,4 +48,8 @@ Explanation: Your function should return k = 7, with the first seven elements of
 
 It does not matter what you leave beyond the returned k (hence they are underscores).
 
+## Intuition 💬
+<!-- Describe your first thoughts on how to solve this problem. -->
+I began thinking about comparing i against i - 1 and i + 1 (The previous and next elements in the array) but this obviously causes some array out of bounds issues. 
 
+I thought about having a counter that kept track of elements that had been encountered previously, making it easier to remove elements duplicated more than twice.
