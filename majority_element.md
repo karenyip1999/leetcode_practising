@@ -38,5 +38,44 @@ I also thought about when iterating through the array, counting the occurrences 
 11. If the counter ended up being the same as the value of majority then val was returned
 12. Finally, val is returned if it had not been returned before
 
-In hindsight, as the majority is defined in this task as an element that appears more than half the size of the array, I could have sorted the array and then returned the element at the position of ```nums[nums.length/2]```
+## Code 📝
+My solution to the task.
+```java
+class Solution {
+    public int majorityElement(int[] nums) {
+        int majority = nums.length/2 + 1;
+        int counter = 1;
+        int val = 0;
+        Arrays.sort(nums);
+        if(nums.length < 2){
+            val = nums[0];
+            return val;
+        }
+        
+        for(int i = 1; i < nums.length; i++){
+            if(nums[i] == nums[i - 1]){
+                val = nums[i];
+                counter++;
+            }
+            if(nums[i] != nums[i - 1]){
+                val = nums[i];
+                counter = 1;
+            }
+            if(counter == majority){
+                return val;
+            }
+        }
+        return val;
+    }
+}
+```
 
+In hindsight, as the majority is defined in this task as an element that appears more than half the size of the array, I could have sorted the array and then returned the element at the position of ```nums[nums.length/2]```
+```java
+class Solution {
+    public int majorityElement(int[] nums) {
+        Arrays.sort(nums);
+        return nums[nums.length/2];
+    }
+}
+```
