@@ -45,3 +45,26 @@ This is the approach I pursued to solve the problem.
 7. Outside of the for loop is an if statement that checks if the input string s is equal to reverseS
 8. If the condition is met, true is returned otherwise false is returned
 
+## Code 📝
+My solution to the task.
+```java
+class Solution {
+    public boolean isPalindrome(String s) {
+        s = s.replaceAll("[^A-Za-z0-9]", "").toLowerCase();    
+        char character;
+        String reverseS = "";
+            
+        for(int i = 0; i < s.length(); i++){
+            character = s.charAt(i);
+            reverseS = character + reverseS;
+        }
+        
+        if(s.equals(reverseS)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+}
+```
