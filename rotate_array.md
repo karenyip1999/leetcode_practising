@@ -24,3 +24,12 @@ Explanation:
 Rotate 1 steps to the right: [99,-1,-100,3]
 
 Rotate 2 steps to the right: [3,99,-1,-100]
+
+## Intuition 💬
+<!-- Describe your first thoughts on how to solve this problem. -->
+My initial thoughts were to reverse the array and then from the middle of the array, I would attempt to place the end elements in ascending order.
+
+I tried to do so with two separate for loops to handle the front and the end of the array separately but this did not work.
+
+Instead I tried to write a reverse method that would do this in multiple steps.
+
