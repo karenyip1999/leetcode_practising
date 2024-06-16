@@ -27,3 +27,9 @@ Output: ```true```
 Explanation: s is an empty string "" after removing non-alphanumeric characters.
 
 Since an empty string reads the same forward and backward, it is a palindrome.
+
+## Intuition 💬
+<!-- Describe your first thoughts on how to solve this problem. -->
+My immediate thoughts were that I could remove all non-alphanumeric characters, reverse the string and then compare with the input to check if they are a match.
+
+This is the approach I pursued to solve the problem.
