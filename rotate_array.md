@@ -33,3 +33,15 @@ I tried to do so with two separate for loops to handle the front and the end of 
 
 Instead I tried to write a reverse method that would do this in multiple steps.
 
+## Approach 💡
+<!-- Describe your approach to solving the problem. -->
+1. Starting with the reverse method I created, it takes in an array called nums, an int called start and an int called end
+2. I used a while loop that ran whilst the start value is less than the end value 
+3. An int variable called temp held the element at the index of start
+4. The element of start then gets the element of end assigned to it
+5. The element of end is then assigned the value held by temp
+6. With each iteration, the value of start then increased by 1 and the value of end decreased by 1
+7. Inside the rotate method, I reassigned k to be the modulus of the length of the array to remove any unnecessary iterations if k was a number larger than the length of the array
+8. I used the reverse method to reverse the whole array nums shown by the start value of 0 and the end value being the final element in the nums array
+9. I then reversed the beginning of the array using the reverse method with the start value being 0 and the end value of k - 1
+10. Finally, the end of the array is reversed using the reverse method taking k as the start value and the end value being the final element in the nums array 
