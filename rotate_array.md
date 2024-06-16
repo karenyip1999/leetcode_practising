@@ -45,3 +45,26 @@ Instead I tried to write a reverse method that would do this in multiple steps.
 8. I used the reverse method to reverse the whole array nums shown by the start value of 0 and the end value being the final element in the nums array
 9. I then reversed the beginning of the array using the reverse method with the start value being 0 and the end value of k - 1
 10. Finally, the end of the array is reversed using the reverse method taking k as the start value and the end value being the final element in the nums array 
+
+## Code 📝
+My solution to the task.
+```java
+class Solution {
+    public void rotate(int[] nums, int k) {
+        k = k % nums.length;
+        reverse(nums, 0, nums.length - 1);
+        reverse(nums, 0, k -1);
+        reverse(nums, k, nums.length - 1);
+    }
+    
+    public void reverse(int [] nums, int start, int end){
+        while (start < end){
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+            start++;
+            end--;
+        }
+    }
+}
+```
