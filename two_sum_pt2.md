@@ -60,3 +60,27 @@ I tried to limit down the range of elements being checked using a binary search 
 8. A final if else statement was used to check if the sum of the element at index1 and index2 was equal to the target value
 9. If the sum was equal to the target then the index1 value and index2 value were both increased by 1 as it is a 1- indexed array, before being returned
 10. Finally, index1 increased by 1 and index2 increased by 1 were returned 
+
+## Code 📝
+My solution to the task.
+```java
+class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+        int index1 = 0;
+        int index2 = numbers.length -1;
+        
+        while(numbers[index1] < numbers[index2]){
+            if(numbers[index1] + numbers[index2] > target){
+                index2 --;
+            }
+            else if(numbers[index1] + numbers[index2] < target){
+                index1 ++;
+            }
+            else if(numbers[index1] + numbers[index2] == target){
+                return new int [] {index1 + 1, index2 + 1};
+            }
+        }
+        return new int[] {index1 + 1, index2 + 1};
+    }
+}
+```
