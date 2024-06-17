@@ -48,3 +48,15 @@ I had initially thought about removing the larger elements at the end of the arr
 
 I tried to limit down the range of elements being checked using a binary search which inspired my solution to the task.
 
+## Approach 💡
+<!-- Describe your approach to solving the problem. -->
+1. I created a variable called index1 and initiated it to 0 which was used to hold the index of the element towards the beginning of the numbers array and counted upwards
+2. I created a variable called index2 and initiated it to the final element in the numbers array and this decreased through the numbers array
+3. I used a while loop to iterate through the numbers array whilst the element held at index1 was less than the element held at index2
+4. Inside of the while loop was an if statement that checked if the sum of the element at index1 and index2 was greater than the target value
+5. If the sum was larger than the target then index2 would decrease as it would mean the element being used at the end of the array was too large 
+6. An if else statement was used to check if the sum of the element at index1 and index2 was less than the target value
+7. If the sum was less than the target then index1 would increase as it would mean the element being used at the beginning of the array was too small
+8. A final if else statement was used to check if the sum of the element at index1 and index2 was equal to the target value
+9. If the sum was equal to the target then the index1 value and index2 value were both increased by 1 as it is a 1- indexed array, before being returned
+10. Finally, index1 increased by 1 and index2 increased by 1 were returned 
