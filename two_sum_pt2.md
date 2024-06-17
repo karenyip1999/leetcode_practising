@@ -41,3 +41,10 @@ Explanation: The sum of -1 and 0 is -1.
 Therefore index1 = 1, index2 = 2. 
 
 We return [1, 2].
+
+## Intuition 💬
+<!-- Describe your first thoughts on how to solve this problem. -->
+I had initially thought about removing the larger elements at the end of the array that were greater than the target number which I thought would remove any unnecessary iterations of just comparing 2 numbers greater than the target.
+
+I tried to limit down the range of elements being checked using a binary search which inspired my solution to the task.
+
