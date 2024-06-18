@@ -14,3 +14,11 @@ Output: ```true```
 Input: ```s = "axc", t = "ahbgdc"```
 
 Output: ```false```
+
+## Intuition 💬
+<!-- Describe your first thoughts on how to solve this problem. -->
+My initial thoughts were to use a for loop to iterate through t and s to check if the element at s was equal to the element at t.
+
+Then outside of the loop, if the variable holding the index for s was the same as the length of s, then true could be returned as this would show all matches of s were found and in the correct order. 
+
+This was the final approach I took in creating my solution, but tried to make the solution slightly shorter by using a while loop.
