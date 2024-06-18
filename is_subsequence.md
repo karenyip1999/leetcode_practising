@@ -32,3 +32,23 @@ This was the final approach I took in creating my solution, but tried to make th
 5. If they were equal, sIndex was increased by 1
 6. Outside of this if statement but still inside of the while loop, tIndex was increased by 1
 7. Finally, the boolean result of if sIndex equalled the length of s was returned
+
+## Code 📝
+My solution to the task.
+```java
+class Solution {
+    public boolean isSubsequence(String s, String t) {
+        int sIndex = 0;
+        int tIndex = 0;
+        
+        while (sIndex < s.length() && tIndex < t.length()){
+            if (s.charAt(sIndex) == t.charAt(tIndex)){
+                sIndex++;
+            }
+            tIndex++;
+        }
+        
+        return sIndex == s.length();
+    }
+}
+```
