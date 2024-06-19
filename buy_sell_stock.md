@@ -22,3 +22,13 @@ Input: ```prices = [7,6,4,3,1]```
 Output: ```0```
 
 Explanation: In this case, no transactions are done and the max profit = 0.
+
+## Intuition 💬
+<!-- Describe your first thoughts on how to solve this problem. -->
+My initial thoughts on how to solve this problem involved iterating through the prices array to compare the previous element with the current element, with the smaller element being held within a variable called buy.
+
+I was also thinking of comparing a variable called sell and setting the larger element in this variable.
+
+I would then return a variable called maxProfit that would be calculated by decreasing the buy variable from sell.
+
+This was the approach I led with but ultimately found that I didn't need to compare both buy with the current element and then sell with the current element as calculating the maximum profit using the smallest buy value would solve the problem. 
