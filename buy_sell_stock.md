@@ -43,3 +43,24 @@ This was the approach I led with but ultimately found that I didn't need to comp
 6. Else if the current element minus the buy value was more than the maxProfit value
 7. The value of the current element minus the buy value was assigned to maxProfit
 8. Outside of the for loop, the value of maxProfit was returned 
+
+## Code 📝
+My solution to the task.
+```java
+class Solution {
+    public int maxProfit(int[] prices) {
+        int buy = prices[0];
+        int maxProfit = 0;
+        
+        for(int i = 1; i < prices.length; i++){
+            if(prices[i] < buy){
+                buy = prices[i];
+            }
+            else if(prices[i] - buy > maxProfit){
+                maxProfit = prices[i] - buy;
+            }
+        }
+        return maxProfit;
+    }
+}
+```
