@@ -17,3 +17,9 @@ Output: ```false```
 Input: ```ransomNote = "aa", magazine = "aab"```
 
 Output: ```true```
+
+## Intuition 💬
+<!-- Describe your first thoughts on how to solve this problem. -->
+My initial thoughts on solving this task was to iterate through the magazine string to compare with the individual characters of ransomNote to see if there is a match.
+
+I had also considered checking if magazine ```.contains``` the whole ransomNote without using a hashmap but through testing, I found that ransomNote could be arranged in any way but magazine just needed to use all of the ransomNote characters
