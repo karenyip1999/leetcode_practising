@@ -88,3 +88,43 @@ I had also considered checking if magazine ```.contains``` the whole ransomNote 
 16. ```return true;```
 
     Outside of the for loop, true is returned 
+
+## Code 📝
+My solution to the task.
+```java
+class Solution {
+    public boolean canConstruct(String ransomNote, String magazine) {
+        if(ransomNote.length() > magazine.length()){
+            return false;
+        }
+        
+        HashMap<Character, Integer> magazineMap = new HashMap<>();
+        
+        for(int i = 0; i < magazine.length(); i++){
+            char magCharacter = magazine.charAt(i);
+            if(!magazineMap.containsKey(magCharacter)){
+                magazineMap.put(magCharacter, 1);
+            }
+            else{
+                magazineMap.put(magCharacter, magazineMap.get(magCharacter) + 1);
+            }
+        }
+        
+        for(int j = 0; j < ransomNote.length(); j++){
+            char ransomCharacter = ransomNote.charAt(j);
+            if(magazineMap.containsKey(ransomCharacter)){
+                if(magazineMap.get(ransomCharacter) == 1){
+                    magazineMap.remove(ransomCharacter);
+                }
+                else{
+                    magazineMap.put(ransomCharacter, magazineMap.get(ransomCharacter) -1);
+                }
+            }
+            else{
+                return false;
+            }
+        }
+        return true;
+    }
+}
+```
