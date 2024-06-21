@@ -27,3 +27,20 @@ After, I would create another HashMap for the pattern string that had the key as
 Trying to solve the problem like this however did not check if s followed the same pattern as pattern.
 
 I therefore modified my solution so that I would still have 2 HashMaps, but had both s and pattern in each HashMap.
+
+## Approach 💡
+<!-- Describe your approach to solving the problem. -->
+1. I created a new string array called sArray to hold all of the elements of the s string after I split it at the single spaces using the ```.split()``` method
+2. I created an if statement that checked if the sArray length was not equal to the pattern length then this would immediately return false as s will not follow the same pattern as the pattern string
+3. I created a hashmap called characterToStringMap that was to hold the individual characters of pattern and the element from s
+4. I created another hashmap called stringToCharacterMap that was to hold the element from s and the individual character from pattern
+5. I used a for loop to iterate through the characters in pattern
+6. I created a variable called patternChar to hold the current character
+7. I created a variable called sString to hold the current element inside the sArray
+8. Inside of the for loop, I used an if statement to check that if the characterToStringMap did not contain the key patternChar
+9. characterToStringMap would then have patternChar added, with the corresponding sString
+10. Another if statement checked if the stringToCharacterMap did not contain the key sString
+11. stringToCharacterMap would then have sString added, with the corresponding patternChar
+12. Another if statement checked if the patternChar inside the characterToStringMap did not equal sString or if the sString inside of stringToCharacterMap did not equal patternChar
+13. false would be returned, as this would mean an element in sArray did not match the correct pattern character 
+14. Outside of the for loop, true was returned
