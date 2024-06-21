@@ -44,3 +44,35 @@ I therefore modified my solution so that I would still have 2 HashMaps, but had 
 12. Another if statement checked if the patternChar inside the characterToStringMap did not equal sString or if the sString inside of stringToCharacterMap did not equal patternChar
 13. false would be returned, as this would mean an element in sArray did not match the correct pattern character 
 14. Outside of the for loop, true was returned
+
+## Code 📝
+My solution to the task.
+```java
+class Solution {
+    public boolean wordPattern(String pattern, String s) {
+        String[] sArray = s.split(" ");
+        
+        if(sArray.length != pattern.length()){
+            return false;
+        }
+        
+        HashMap<Character, String> characterToStringMap = new HashMap<>();
+        HashMap<String, Character> stringToCharacterMap = new HashMap<>();
+        
+        for(int i = 0; i < pattern.length(); i ++){
+            char patternChar = pattern.charAt(i);
+            String sString = sArray[i];
+            if(!characterToStringMap.containsKey(patternChar)){
+                characterToStringMap.put(patternChar, sString);
+            }
+            if(!stringToCharacterMap.containsKey(sString)){
+                stringToCharacterMap.put(sString, patternChar);
+            }
+            if(!characterToStringMap.get(patternChar).equals(sString) || !stringToCharacterMap.get(sString).equals(patternChar)){
+                return false;
+            }
+        }
+        return true;
+    }
+}
+```
