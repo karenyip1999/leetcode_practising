@@ -32,3 +32,7 @@ I also noticed that it did not specify that only a single space would be used so
 
 I also noticed that there can be leading and trailing spaces which can cause issues when selecting the last element in an array if the trailing space can be considered the final element
 
+## Approach 💡
+<!-- Describe your approach to solving the problem. -->
+1. I used the ```.trim()``` method to remove leading and trailing spaces, as well as the ```.split()``` method which removed spaces, but implementing the regex version through ```“\\s+”``` meant one or more spaces could be removed and then this was assigned to the string array called sArray
+2. Finally a return statement returned the length of the final element in the array 
