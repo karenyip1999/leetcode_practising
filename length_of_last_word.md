@@ -24,3 +24,11 @@ Output: ```6```
 
 Explanation: The last word is "joyboy" with length 6.
  
+## Intuition 💬
+<!-- Describe your first thoughts on how to solve this problem. -->
+I immediately saw through the examples that each one included spaces to split up each word so I knew I would have to use the ```.split()``` method to create an array of strings 
+
+I also noticed that it did not specify that only a single space would be used so I would need to use the regex version of ```.split()``` to remove 1 or more spaces 
+
+I also noticed that there can be leading and trailing spaces which can cause issues when selecting the last element in an array if the trailing space can be considered the final element
+
