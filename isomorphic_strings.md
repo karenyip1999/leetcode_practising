@@ -42,3 +42,30 @@ This is the approach I have taken to create my actual solution for the task.
 10. A final if statement checks that if sChar inside of sTot doesn't equal tChar or tChar inside of tTos doesn't equal sChar
 11. Then false is returned as this means the strings are not isomorphic
 12. Finally, true is returned
+
+## Code 📝
+My solution to the task.
+```java
+class Solution {
+    public boolean isIsomorphic(String s, String t) {
+        
+        HashMap<Character, Character> sTot = new HashMap<>();
+        HashMap<Character, Character> tTos = new HashMap<>();
+        
+        for(int i = 0; i < s.length(); i ++){
+            char sChar = s.charAt(i);
+            char tChar = t.charAt(i);
+            if(!sTot.containsKey(sChar)){
+                sTot.put(sChar, tChar);
+            }
+            if(!tTos.containsKey(tChar)){
+                tTos.put(tChar, sChar);
+            }
+            if(!sTot.get(sChar).equals(tChar) || !tTos.get(tChar).equals(sChar)){
+                return false;
+            }
+        }
+        return true;
+    }
+}
+```
