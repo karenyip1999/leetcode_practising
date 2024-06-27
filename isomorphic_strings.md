@@ -21,3 +21,9 @@ Output: ```false```
 Input: ```s = "paper", t = "title"```
 
 Output: ```true```
+
+## Intuition 💬
+<!-- Describe your first thoughts on how to solve this problem. -->
+My instant thought when reading the task was to create 2 separate hashmaps containing s mapped to t and then t mapped to s to compare the pattern of mappings for both strings.
+
+This is the approach I have taken to create my actual solution for the task.
