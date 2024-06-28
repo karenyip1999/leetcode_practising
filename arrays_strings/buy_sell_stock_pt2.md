@@ -35,3 +35,11 @@ Input: ```prices = [7,6,4,3,1]```
 Output: ```0```
 
 Explanation: There is no way to make a positive profit, so we never buy the stock to achieve the maximum profit of 0.
+
+## Intuition 💬
+<!-- Describe your first thoughts on how to solve this problem. -->
+I inititally thought that I could solve this task by iterating through the array to find the 2 highest profits, storing these into 2 variables and then adding them together to make the max profit.
+
+However, I realised that there is potential for there to be more than 2 profits and the only thing I need to look out for is if there is a chance to make a profit later down the array.
+
+I decided to find a solution that when iterating through the array, checks if the current element is higher than the previous element.
