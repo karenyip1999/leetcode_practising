@@ -52,6 +52,19 @@ I decided to find a solution that when iterating through the array, checks if th
 4. The current element's value has the previous element's value minused from it and is then added to the variable maxProfit's value and the total is assigned to maxProfit
 5. Outside of the for loop, maxProfit is returned
 
-
-
-
+## Code 📝
+My solution to the task.
+```java
+class Solution {
+    public int maxProfit(int[] prices) {
+        int maxProfit = 0;
+        
+        for(int i = 1; i < prices.length; i ++){
+            if(prices[i] > prices[i - 1]){
+                maxProfit = maxProfit + (prices[i] - prices[i - 1]);
+            }
+        }
+        return maxProfit;
+    }
+}
+```
