@@ -43,3 +43,15 @@ I inititally thought that I could solve this task by iterating through the array
 However, I realised that there is potential for there to be more than 2 profits and the only thing I need to look out for is if there is a chance to make a profit later down the array.
 
 I decided to find a solution that when iterating through the array, checks if the current element is higher than the previous element.
+
+## Approach 💡
+<!-- Describe your approach to solving the problem. -->
+1. I created a variable called maxProfit that is initiated at 0 which stores the maximum profit of the array
+2. I used a for loop to iterate through the array which starts at index 1 as the current element will be compared with the previous element
+3. Inside of the for loop, I used an if statement to check if the current element is higher than the previous element which would indicate a profit
+4. The current element's value has the previous element's value minused from it and is then added to the variable maxProfit's value and the total is assigned to maxProfit
+5. Outside of the for loop, maxProfit is returned
+
+
+
+
