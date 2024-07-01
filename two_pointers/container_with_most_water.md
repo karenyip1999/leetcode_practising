@@ -44,3 +44,31 @@ I then decided that in order to find the largest height with the largest length,
 11. Else if the right height was larger than the left height
 12. The left index was increased 
 13. Outside of the while loop, area is returned
+
+## Code 📝
+My solution to the task.
+```java
+class Solution {
+    public int maxArea(int[] height) {
+        int left = 0;
+        int right = height.length - 1;
+        int area = 0;
+
+        while(left < right){
+            if(height[right] * (right - left) > area && height[left] >= height[right]){
+                area = ((right - left) * height[right]);
+            }                                                                                          
+            else if(height[left] * (right - left) > area && height[right] >= height[left]){
+                area = ((right - left) * height[left]);
+            }
+            if(height[left] >= height[right]){
+                right --;
+            }
+            else if (height[right] >= height[left]){
+                left ++;
+            }
+        }
+        return area;
+    }
+}
+```
