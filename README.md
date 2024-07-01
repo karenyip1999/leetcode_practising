@@ -7,4 +7,4 @@ In each md document, I have included:
 * **Approach** section explaining the approach I have taken to solve the task
 * **Code** section displaying my solution to the task
 
-![LeetCode Stats](https://leetcard.jacoblin.cool/karenyip1999?theme=light&font=Be%20Vietnam%20Pro&ext=activity)
+![LeetCode Stats](https://leetcard.jacoblin.cool/karenyip1999?theme=light&font=Montaga)
