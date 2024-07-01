@@ -22,3 +22,10 @@ In this case, the max area of water the container can contain is 49.
 Input: ```height = [1,1]```
 
 Output: ```1```
+
+## Intuition 💬
+<!-- Describe your first thoughts on how to solve this problem. -->
+I initially thought about iterating through the array to find the largest heights using a nested for loop but this is inefficient.
+
+I then decided that in order to find the largest height with the largest length, I will need to keep track of the largest area as this will combine these two together when the largest area is not necessarily the highest height or the longest length. 
+
