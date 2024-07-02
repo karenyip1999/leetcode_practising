@@ -25,3 +25,11 @@ Output: ```4```
 Explanation: You can allocate to the first, second and third child with 1, 2, 1 candies respectively.
 
 The third child gets 1 candy because it satisfies the above two conditions.
+
+## Intuition 💬
+<!-- Describe your first thoughts on how to solve this problem. -->
+I initally thought about iterating through the array from left to right and keeping a counter of the candies being distributed to each child. 
+
+I then thought about creating an array to keep count of the candies distributed to each child instead. 
+
+I then realised that instead of just iterating through the array from left to right, I will also need to check from right to left as I will need to make sure that if the current child has a higher rating than the child on the right, they will need to have more candies. 
