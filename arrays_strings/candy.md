@@ -48,3 +48,32 @@ I then realised that instead of just iterating through the array from left to ri
 10. Outside of this for loop, another for loop increments through the candyArray
 11. The value of the current element in candyArray is added and assigned to candyCount
 12. Outside of this for loop, candyCount is returned
+
+## Code 📝
+My solution to the task.
+```java
+class Solution {
+    public int candy(int[] ratings) {
+        int[] candyArray = new int [ratings.length];
+        Arrays.fill(candyArray, 1);
+        int candyCount = 0; 
+        
+        for(int i = 1; i < ratings.length; i ++){
+            if(ratings[i] > ratings[i - 1]){
+                candyArray[i] = candyArray[i - 1] + 1;
+            }
+        }
+        
+        for(int i = ratings.length - 2; i >= 0; i --){
+            if(ratings[i] > ratings[i + 1] && candyArray[i] < candyArray[i + 1] + 1){
+                candyArray[i] = candyArray[i + 1] + 1;
+            }
+        }
+        
+        for(int i = 0; i < ratings.length; i ++){
+            candyCount += candyArray[i];
+        }
+        return candyCount;
+    }
+}
+```
