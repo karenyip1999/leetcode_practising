@@ -19,3 +19,11 @@ Output: ```-321```
 Input: ```x = 120```
 
 Output: ```21```
+
+## Intuition 💬
+<!-- Describe your first thoughts on how to solve this problem. -->
+I had initally thought to use a for loop to iterate through x to reverse the digits.
+
+However, as it is an int I found that I could do this without a for loop by dividing x by 10 to get the last digit of x.
+
+A quick Google search found that the 32 bit range I needed would be between -214748364 and 214748364.
