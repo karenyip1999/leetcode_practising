@@ -38,3 +38,23 @@ A quick Google search found that the 32 bit range I needed would be between -214
 6. xReverse then has xReverse multiplied by 10 with remainder added to it, so instead of having 2 single digits added together, the remainder will go at the end of xReverse
 7. x is then divided by 10 which therefore removes the last digit we have placed in xReverse
 8. Outside of the while loop, xReverse is returned
+
+## Code 📝
+My solution to the task.
+```java
+class Solution {
+    public int reverse(int x) {
+        int xReverse = 0; 
+        
+        while(x != 0){
+            if(xReverse < -214748364 || xReverse > 214748364){
+                return 0;
+            }
+            int remainder = x % 10;
+            xReverse = xReverse * 10 + remainder;
+            x = x / 10;
+        }
+        return xReverse;
+    }
+}
+```
