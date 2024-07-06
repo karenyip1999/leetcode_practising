@@ -71,3 +71,33 @@ I realised however that I could check this iterating through s normally, and if 
 6. If so, the current character value would be decremented from total
 7. Else, the current character value was added to the total
 8. Outside of the for loop, the total is returned
+
+## Code 📝
+My solution to the task.
+```java
+class Solution {
+    public int romanToInt(String s) {
+        HashMap<Character, Integer> numeralsMap = new HashMap<>();
+        numeralsMap.put('I', 1);
+        numeralsMap.put('V', 5);
+        numeralsMap.put('X', 10);
+        numeralsMap.put('L', 50);
+        numeralsMap.put('C', 100);
+        numeralsMap.put('D', 500);
+        numeralsMap.put('M', 1000);
+
+        int total = 0;
+    
+        for(int i = 0; i < s.length(); i++){
+            char numeralChar = s.charAt(i);
+            if(i < s.length() - 1 && numeralsMap.get(numeralChar) < numeralsMap.get(s.charAt(i + 1))){
+                total -= numeralsMap.get(numeralChar);
+            }
+            else{
+                total += numeralsMap.get(numeralChar);
+            }
+        }
+        return total;
+    }
+}
+```
