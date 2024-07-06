@@ -55,4 +55,8 @@ Output: ```1994```
 
 Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
+## Intuition 💬
+<!-- Describe your first thoughts on how to solve this problem. -->
+I had initially thought that I could iterate through s backwards to check if the character after it would be lower than the current character.
 
+I realised however that I could check this iterating through s normally, and if I found a character that was smaller than the next character, I could just decrement it from the total.
