@@ -60,3 +60,14 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 I had initially thought that I could iterate through s backwards to check if the character after it would be lower than the current character.
 
 I realised however that I could check this iterating through s normally, and if I found a character that was smaller than the next character, I could just decrement it from the total.
+
+## Approach 💡
+<!-- Describe your approach to solving the problem. -->
+1. I created a new hashmap called numeralsMap and placed each roman numeral character into it
+2. I created a variable called total and initiated it to 0 which would hold the integer conversion of the roman numerals
+3. I used a for loop to iterate through s starting at index 0
+4. Inside of the for loop, I created a variable called numeralChar that would hold the current character as I iterated through s
+5. I used an if statement to check if i was smaller than the current length of s minus 1, and that the current character was less than the next character
+6. If so, the current character value would be decremented from total
+7. Else, the current character value was added to the total
+8. Outside of the for loop, the total is returned
