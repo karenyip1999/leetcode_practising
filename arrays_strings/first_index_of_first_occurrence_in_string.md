@@ -39,3 +39,33 @@ I was thinking of creating a variable that would hold the index of the first occ
 10. Outside of the for loop, an if statement checks if haystackNeedle is set to true
 11. If so, i is returned for the index of the beginning of needle
 12. Outside of this, -1 is returned
+
+## Code 📝
+My solution to the task.
+```java
+class Solution {
+    public int strStr(String haystack, String needle) {
+        boolean haystackNeedle = false;
+        
+        if(haystack.length() < needle.length()){
+            return -1;
+        }
+        
+        for(int i = 0; i <= haystack.length() - needle.length(); i ++){
+            if(haystack.charAt(i) == needle.charAt(0)){
+                haystackNeedle = true;
+                for(int k = 1; k < needle.length(); k ++){
+                    if(haystack.charAt(i + k) != needle.charAt(k)){
+                        haystackNeedle = false;
+                        break;
+                    }
+                }
+            }
+            if(haystackNeedle == true){
+                return i;
+            }
+        }
+        return -1;
+    }
+}
+```
