@@ -58,3 +58,36 @@ The way I have decided to approach this task is to do this using an array, where
 14. I used a for loop to iterate through the zigzag array
 15. I added the current element from zigzag onto the end of conversion and assigned this to conversion
 16. Outside of the for loop, conversion is returned
+
+## Code 📝
+My solution to the task.
+```java
+class Solution {
+    public String convert(String s, int numRows) {        
+        if(numRows == 1 || numRows >= s.length()){
+            return s;
+        }
+        
+        String[] zigzag = new String[numRows]; 
+        Arrays.fill(zigzag, "");
+
+        int i = 0;
+        while(i < s.length()){
+            for(int j = 0; j < numRows && i < s.length(); j ++){
+                zigzag[j] = zigzag[j] + s.charAt(i);
+                i++;
+            }
+            for(int k = numRows - 2; k > 0 && i < s.length(); k --){
+                zigzag[k] = zigzag[k] + s.charAt(i);
+                i++;
+            }
+        }
+        
+        String conversion = "";
+        for(int l = 0; l < zigzag.length; l++){
+            conversion += zigzag[l];
+        }
+        return conversion;
+    }
+}
+```
