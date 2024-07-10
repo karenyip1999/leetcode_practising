@@ -33,3 +33,9 @@ P     I
 Input: ```s = "A", numRows = 1```
 
 Output: ```"A"```
+
+## Intuition 💬
+<!-- Describe your first thoughts on how to solve this problem. -->
+My initial thoughts on how to solve this task was to iterate through s and add each character to a string.
+
+The way I have decided to approach this task is to do this using an array, where I would later for loop through it and concatenate the strings together to produce one string.
