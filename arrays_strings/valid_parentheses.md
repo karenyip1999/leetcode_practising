@@ -45,3 +45,34 @@ However, I realised that I struggled to keep track of the order of the opening a
 13. A final if statement is used to check if the current character was equal to ] and the character popped from the top of the character stack is not equal to the opening bracket [
 14. Then false is returned
 15. Outside of the for loop, the character stack is checked to see if it is empty as if the stack is empty then all open brackets have been closed, which returns a boolean 
+
+## Code 📝
+My solution to the task.
+```java
+class Solution {
+    public boolean isValid(String s) {
+        Stack <Character> charStack = new Stack <>();
+        for(int i = 0; i < s.length(); i ++){
+            char sChar = s.charAt(i);
+            if(sChar == '(' || sChar == '{' || sChar == '['){
+                charStack.push(sChar);
+            }
+            else{
+                if(charStack.empty()){
+                    return false;
+                }
+                if(sChar == ')' && charStack.pop() != '('){
+                    return false;
+                }
+                if(sChar == '}' && charStack.pop() != '{'){
+                    return false;
+                }
+                if(sChar == ']' && charStack.pop() != '['){
+                    return false;
+                }
+            }
+        }
+        return charStack.empty();
+    }
+}
+```
