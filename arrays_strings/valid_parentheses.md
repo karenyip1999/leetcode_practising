@@ -21,3 +21,9 @@ Output: ```true```
 Input: ```s = "(]"```
 
 Output: ```false```
+
+## Intuition 💬
+<!-- Describe your first thoughts on how to solve this problem. -->
+I had initially thought to use a HashMap to keep track of the brackets and increase the value of each during the iteration through s.
+
+However, I realised that I struggled to keep track of the order of the opening and closing brackets and therefore chose to use a character stack so when I pushed elements to the top of the stack, it would keep the order. 
