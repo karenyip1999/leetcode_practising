@@ -29,3 +29,9 @@ Input: ```root = [], targetSum = 0```
 Output: ```false```
 
 Explanation: Since the tree is empty, there are no root-to-leaf paths.
+
+## Intuition 💬
+<!-- Describe your first thoughts on how to solve this problem. -->
+My initial thoughts on solving this problem was to traverse through the binary tree whilst keeping track of the targetSum and to check if that had been met at a leaf or not.
+
+This is the approach I took to creating my solution.
