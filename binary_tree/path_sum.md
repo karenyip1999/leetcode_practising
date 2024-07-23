@@ -43,3 +43,37 @@ This is the approach I took to creating my solution.
 3. An else if statement checked if we had reached a leaf by checking that the left and right nodes were null and targetSum minus the value of the current node was equal to 0
 4. If so, then return true
 5. Else, return the method using the left node and the value of the targetSum minus the value of the current node as the parameters or, the right node and the value of the targetSum minus the value of the current node as the parameters 
+
+## Code 📝
+My solution to the task.
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public boolean hasPathSum(TreeNode root, int targetSum) {
+        
+        if(root == null){
+            return false;
+        }
+        else if(root.left == null && root.right == null && targetSum - root.val == 0){
+            return true;
+        }
+        else{
+            return hasPathSum(root.left, targetSum - root.val) || hasPathSum(root.right, targetSum - root.val);
+        }
+    }
+}
+```
