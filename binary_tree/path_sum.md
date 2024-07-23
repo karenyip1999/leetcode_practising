@@ -35,3 +35,11 @@ Explanation: Since the tree is empty, there are no root-to-leaf paths.
 My initial thoughts on solving this problem was to traverse through the binary tree whilst keeping track of the targetSum and to check if that had been met at a leaf or not.
 
 This is the approach I took to creating my solution.
+
+## Approach 💡
+<!-- Describe your approach to solving the problem. -->
+1. I used an if statement for a base case that checked that if the node tree was empty
+2. If so, return false
+3. An else if statement checked if we had reached a leaf by checking that the left and right nodes were null and targetSum minus the value of the current node was equal to 0
+4. If so, then return true
+5. Else, return the method using the left node and the value of the targetSum minus the value of the current node as the parameters or, the right node and the value of the targetSum minus the value of the current node as the parameters 
