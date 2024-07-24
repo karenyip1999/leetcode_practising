@@ -23,3 +23,9 @@ Output: ```[0]```
 Input: ```l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]```
 
 Output: ```[8,9,9,9,0,0,0,1]```
+
+## Intuition 💬
+<!-- Describe your first thoughts on how to solve this problem. -->
+My initial thoughts on solving this problem were to tackle the quirks that come with addition such as carrying 1 when addition makes the single digit turn into a double digit.
+
+I also thought about placement of the integers when carrying out the addition as there is nothing to stop the addition from being between different length integers which would need 0 placed in front of the shorter integer.
