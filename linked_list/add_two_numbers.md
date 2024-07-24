@@ -29,3 +29,23 @@ Output: ```[8,9,9,9,0,0,0,1]```
 My initial thoughts on solving this problem were to tackle the quirks that come with addition such as carrying 1 when addition makes the single digit turn into a double digit.
 
 I also thought about placement of the integers when carrying out the addition as there is nothing to stop the addition from being between different length integers which would need 0 placed in front of the shorter integer.
+
+## Approach 💡
+<!-- Describe your approach to solving the problem. -->
+1. I created a new ListNode called result that would act as the dummy node that is a placeholder at the beginning of the linked list
+2. I created a ListNode called current that references to result, that acts as a pointer as we traverse through the linked list
+3. I created a variable called carry which accounts for when addition of a single digit creates a double digit, and initiated it to 0
+4. I used a while loop that traverses through the linked list whilst l1 is not equal to null or l2 is not equal to null
+5. Inside of the while loop, I used a ternary operator that checked if l1 was equal to null, then the variable currentVal1 is set to 0 as this accounts for the correct placement of a shorter integer during addition, else currentVal1 holds the value of the node at l1
+6. Another ternary operator checked if l2 was equal to null, then the variable currentVal2 is set to 0 as this also accounts for the correct placement of a shorter integer during addition, else currentVal2 holds the value of the node at l2
+7. currentVal1, currentVal2 and carry are added together and are assigned to the variable called sum
+8. sum is divided by 10, as an integer that cannot be divided without a remainder will be a double digit, so is assigned to carry
+9. A new ListNode is made next to current, and the value of sum modulo 10 is placed in the node 
+10. I used an if statement to check if l1 is not null
+11. If so, the pointer at l1 moves forward by assigning the next l1 node to the variable l1
+12. Another if statement checks if l2 is not null
+13. If so, the pointer at l2 also moves forward by assigning the next l2 node to the variable l2
+14. The pointer at current is moved forward to the next node and is assigned to current
+15. Outside of the while loop, an if statement checks if carry equals 1
+16. If so, a new node is created with 1 inside of it as this accounts for a 1 that still needs to be included, and is assigned to current
+17. Finally, result.next is returned and ```.next``` is used to account for the dummy node at the beginning of result that is automatically 0
