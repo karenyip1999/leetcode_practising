@@ -49,3 +49,43 @@ I also thought about placement of the integers when carrying out the addition as
 15. Outside of the while loop, an if statement checks if carry equals 1
 16. If so, a new node is created with 1 inside of it as this accounts for a 1 that still needs to be included, and is assigned to current
 17. Finally, result.next is returned and ```.next``` is used to account for the dummy node at the beginning of result that is automatically 0
+
+## Code 📝
+My solution to the task.
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode result = new ListNode();
+        ListNode current = result;
+        int carry = 0;
+        while(l1 != null || l2 != null){
+            int currentVal1 = l1 == null ? 0 : l1.val;
+            int currentVal2 = l2 == null ? 0 : l2.val;
+            int sum = currentVal1 + currentVal2 + carry;
+            carry = sum / 10;
+            current.next = new ListNode(sum % 10);
+            if(l1 != null){
+                l1 = l1.next;
+            }
+            if(l2 != null){
+                l2 = l2.next;
+            }
+            current = current.next;
+        }
+        if(carry == 1){
+            current.next = new ListNode(1);
+        }
+        return result.next;
+    }
+}
+```
