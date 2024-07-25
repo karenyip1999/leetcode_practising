@@ -46,3 +46,30 @@ I decided to use a Hashset and the sliding window technique which ended up havin
 10. If so, the size of sHashSet was assigned to length
 11. Outside of this inner if statement, an else statement meant the character at the index of left was removed from sHashSet and the left pointer is incremented by 1 to move the sliding window along
 12. Outside of the while loop, length is returned 
+
+## Code 📝
+My solution to the task.
+```java
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        int left = 0; 
+        int right = 0;
+        int length = 0;
+        HashSet<Character> sHashSet = new HashSet<>();
+        while(right < s.length()){
+            if(! sHashSet.contains(s.charAt(right))){
+                sHashSet.add(s.charAt(right));
+                right++;
+                if(sHashSet.size() > length){
+                    length = sHashSet.size();
+                }
+            }
+            else{
+                sHashSet.remove(s.charAt(left));
+                left++;
+            }
+        }
+        return length;
+    }
+}
+```
