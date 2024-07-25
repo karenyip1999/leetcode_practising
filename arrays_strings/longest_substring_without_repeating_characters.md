@@ -31,3 +31,18 @@ My first thoughts about this problem was to either use a character stack to keep
 When I wrote my solution for it using a character stack, I found that although there was a low memory usage of 43.2MB, I had a very high runtime of 658ms.
 
 I decided to use a Hashset and the sliding window technique which ended up having a runtime of 6ms and very little change in memory usage of 44.8MB.
+
+## Approach 💡
+<!-- Describe your approach to solving the problem. -->
+1. I created a variable called left and initiated this to 0 which would act as my left pointer in my sliding window solution
+2. I created a variable called right and initiated this to 0 which would act as my right pointer
+3. I created a variable called length and initiated this to 0 which would keep track of the length of the longest substring with no repeating characters
+4. I created a HashSet called sHashSet that would hold the substring
+5. I used a while loop that would iterate through s whilst right was less than the length of s
+6. Inside of the while loop, an if statement checked that if sHashSet did not contain the character at the index of right
+7. If so, the character at the index of right would be added to sHashSet
+8. The variable right was incremented by 1
+9. Inside of this if statement was another if statement that checked if the size of sHashSet was larger than length
+10. If so, the size of sHashSet was assigned to length
+11. Outside of this inner if statement, an else statement meant the character at the index of left was removed from sHashSet and the left pointer is incremented by 1 to move the sliding window along
+12. Outside of the while loop, length is returned 
