@@ -48,3 +48,49 @@ I decided to take the approach of the merge sort which uses two pointers to comb
 23. An if statement checks if mergedArray's length modulo 2 equals 0 which means the length of the array is even
 24. If so, the value of the element in the middle of the array and the one previous it is added together and then divided by 2 and is returned
 25. Else, the value of the element in the middle of the array is returned
+
+## Code 📝
+My solution to the task.
+```java
+class Solution {
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        int m = nums1.length;
+        int n = nums2.length;
+        int[] mergedArray = new int[m + n];
+        
+        int i = 0; //Index for nums1
+        int j = 0; //Index for nums2
+        int k = 0; //Index for mergedArray[]
+        while(i < m && j < n){
+            if(nums1[i] < nums2[j]){
+                mergedArray[k] = nums1[i];
+                i++;
+            }
+            else{
+                mergedArray[k] = nums2[j];
+                j++;
+            }
+            k++;
+        }
+        
+        while(i < m){
+            mergedArray[k] = nums1[i];
+            k++;
+            i++;
+        }
+        while(j < n){
+            mergedArray[k] = nums2[j];
+            k++;
+            j++;
+        }
+
+        int mid = mergedArray.length / 2;
+        if(mergedArray.length % 2 == 0){
+            return ((mergedArray[mid]) + (mergedArray[mid - 1])) / 2.0;
+        }
+        else{
+            return mergedArray[mid];
+        }
+    }
+}
+```
