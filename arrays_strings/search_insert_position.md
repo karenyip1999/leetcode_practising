@@ -39,3 +39,28 @@ For me, binary search seemed like the fastest solution.
 9. If so, mid decreases by 1 and this is assigned to right
 10. Else, mid is incremented by 1 and this is assigned to left as the target is greater than the value inside the nums array at index mid
 11. Finally, left is returned as this is where the target should be inserted within the nums array if it does not already exist
+
+## Code 📝
+My solution to the task.
+```java
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length - 1;
+        int mid = 0;
+        while(left <= right){
+            mid = left + (right - left) / 2;
+            if(nums[mid] == target){
+                return mid;
+            }
+            if(target < nums[mid]){
+                right = mid - 1;
+            }
+            else{
+                left = mid + 1;
+            }
+        }
+        return left;
+    }
+}
+```
