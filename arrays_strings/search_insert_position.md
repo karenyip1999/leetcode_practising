@@ -25,3 +25,17 @@ Output: ```4```
 My thoughts as soon as I saw this task was to use binary search due to the specification that the solution had to have a logarithmic runtime complexity.
 
 For me, binary search seemed like the fastest solution.
+
+## Approach 💡
+<!-- Describe your approach to solving the problem. -->
+1. I created a variable called left which would hold the index of the lower value in the nums array, so I initiated this to 0
+2. I created a variable called right which would hold the index of the higher value in the nums array, so I initiated this to the index of the final element in nums
+3. I created a variable called mid which would hold the index of the middle value in the nums array, so I initiated this to 0 just to hold a value before I used it within the while loop
+4. I used a while loop that would continue iterating whilst left was less than or equal to right
+5. Inside of the while loop, I set mid to equal right minus left, added to left, and this is divided by 2 to find out the index of the middle number in the array
+6. An if statement checks if the value inside the nums array at the index of mid is equal to the target value
+7. If so, mid is returned
+8. Another if statement checks if the target is less than the value inside the nums array at the index mid
+9. If so, mid decreases by 1 and this is assigned to right
+10. Else, mid is incremented by 1 and this is assigned to left as the target is greater than the value inside the nums array at index mid
+11. Finally, left is returned as this is where the target should be inserted within the nums array if it does not already exist
