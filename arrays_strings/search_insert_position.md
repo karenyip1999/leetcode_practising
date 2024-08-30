@@ -19,3 +19,9 @@ Output: ```1```
 Input: ```nums = [1,3,5,6], target = 7```
 
 Output: ```4```
+
+## Intuition 💬
+<!-- Describe your first thoughts on how to solve this problem. -->
+My thoughts as soon as I saw this task was to use binary search due to the specification that the solution had to have a logarithmic runtime complexity.
+
+For me, binary search seemed like the fastest solution.
